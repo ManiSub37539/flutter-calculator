@@ -125,7 +125,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   _buildButton('='),
                   _buildButton('+'),
                 ],
+
               ),
+            
               Row(
                 children: [
                   _buildButton('%'), // Added modulus button
