@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
       } else if (value == '=') {
         try {
           final expression = Expression.parse(_expression);
-          final evaluator = const ExpressionEvaluator();
+          const evaluator = ExpressionEvaluator();
           final result = evaluator.eval(expression, {});
           _result = ' = $result';
         } catch (e) {
@@ -126,10 +126,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   _buildButton('+'),
                 ],
               ),
+              Row(
+                children: [
+                  _buildButton('%'), // Added modulus button
             ],
           ),
         ],
       ),
-    );
+    ],
+  ),
+  );
   }
 }
