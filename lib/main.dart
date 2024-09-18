@@ -39,6 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
       if (value == 'C') {
         _expression = '';
         _result = '';
+      } else if (value == 'Clear') {
+        _expression = '';
       } else if (value == '=') {
         try {
           final expression = Expression.parse(_expression);
@@ -125,18 +127,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   _buildButton('='),
                   _buildButton('+'),
                 ],
-
               ),
-            
               Row(
                 children: [
                   _buildButton('%'), // Added modulus button
+                  _buildButton('Clear'), // Added clear button
+                ],
+              ),
             ],
           ),
         ],
       ),
-    ],
-  ),
-  );
+    );
   }
 }
